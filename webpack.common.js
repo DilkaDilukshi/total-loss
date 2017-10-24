@@ -17,8 +17,9 @@ const flowPlugin = new FlowWebpackPlugin({
 
 module.exports = {
   entry: {
-    babelPolyfill: 'babel-polyfill',
     app: './src/app/index.jsx',
+    babelPolyfill: 'babel-polyfill',
+    // vendor: ['react', 'react-dom'],
   },
 
   output: {

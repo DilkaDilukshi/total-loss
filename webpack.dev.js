@@ -1,5 +1,6 @@
 const merge = require('webpack-merge');
 const webpack = require('webpack');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const common = require('./webpack.common');
 
@@ -22,5 +23,6 @@ module.exports = merge(common, {
         API_ENDPOINT: JSON.stringify('http://total-loss-api.herokuapp.com'),
       },
     }),
+    new BundleAnalyzerPlugin(),
   ],
 });
